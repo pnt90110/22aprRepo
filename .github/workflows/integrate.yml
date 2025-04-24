@@ -9,10 +9,10 @@ jobs:
   test_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: 21
+          node-version: 23
       - run: npm ci
       - run: npm test
       - run: npm run build
